@@ -203,6 +203,7 @@
         .content {
             margin-top: 0px;
             padding: 30px;
+            
         }
 
 
@@ -521,16 +522,15 @@
 
         /* Category images */
         .listing .category {
-            width: 150px;
-            height: 150px;
+            max-width: 150px;
+            max-height: auto;
             object-fit: cover;
             background-color: var(--white);
             transition: transform .2s;
             border-radius: 5px;
             cursor: pointer;
+            display: flex;
             }
-
- 
 
         /* Hover Effect */
         .listing .category:hover {
@@ -752,10 +752,11 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
+            margin: 20px;
         }
 
         .product {
-           flex-basis: calc(20% - 10px);
+            flex-basis: calc(20% - 10px);
             position: relative;
             display: flex;
             flex-direction: column;
@@ -991,34 +992,6 @@
             text-decoration-thickness: 1px;
         }
 
-        /* Responsive styles */
-        @media (max-width: 340px) {
-            .comparison-container {
-                flex-direction: column;
-                align-items: center;
-
-            }
-            
-            .comparison-card {
-                min-width: 100%;
-                max-width: 100%;
-                margin-bottom: 20px;
-            }
-            
-            .recommended {
-                transform: scale(1);
-            }
-            
-            .comparison-section h2 {
-                font-size: 1.8rem;
-            }
-            
-            .price {
-                font-size: 1.8rem;
-            }
-        }
-
-
 /* ================================================= */
 /* ------------------------ FAQ CSS ---------------- */
 /* ================================================= */
@@ -1096,21 +1069,8 @@
       transform: rotate(180deg);
     }
 
-    /* Media Query for smaller screens */
-    @media (max-width: 768px) {
-      .faq-question {
-        font-size: 16px;
-      }
 
-      .faq-answer {
-        font-size: 14px;
-      }
-
-     .faq-answer.open {
-      max-height: 400px;
-    }
-    }
-
+    
     
 
 /* ================================================= */
@@ -1709,92 +1669,7 @@
     width: 50%;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 992px) {
-    .product-section {
-        max-width: 95%;
-        margin: 30px auto;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .product-section {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .image-slider, .product-info {
-        width: 100%;
-        padding-right: 0;
-    }
-    
-    .image-slider {
-        margin-bottom: 25px;
-    }
-    
-    .thumbnails {
-        justify-content: center;
-    }
-    
-    .product-options {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .product-section {
-        margin: 20px auto;
-        padding: 10px;
-    }
-    
-    .product-info h1 {
-        font-size: 22px;
-    }
-    
-    .thumbnails {
-        flex-wrap: wrap;
-    }
-    
-    .thumbnails img {
-        width: 23%;
-        margin-bottom: 5px;
-    }
-    
-    .product-options img {
-        width: 50px;
-    }
-    
-    .size-selector select {
-        width: 100%;
-    }
-    
-    .accordion {
-        font-size: 14px;
-        padding: 12px;
-    }
-}
-
-/* For very small devices */
-@media screen and (max-width: 500px) {
-    .product-section {
-        margin: 20px auto;
-        padding: 10px;
-    }
-	
-	.thumbnails img {
-        width: 22%;
-    }
-    
-    .product-options img {
-        width: 45px;
-        margin-right: 5px;
-    }
-    
-    .product-info h1 {
-        font-size: 20px;
-    }
-	
-}
 
 
 /* ================================================= */
@@ -2239,63 +2114,9 @@ meesho-btn a:active {
          }
 
 
-/* ================================================= */
-/* ------------- Responsive Styles CSS ------------- */
-/* ================================================= */
-
-     /* Responsive Styles for 768px width */
-
-        @media (max-width: 768px) {   
-           .logo {
-                font-size: 24px;
-            }
-
-           .zoom-logo {
-                  max-width: 50px;
-                        }
-
-           header {
-                padding: 10px;
-            }
-
-            .sidebar {
-                width: 300px;
-            }
-       
-           .menu-options {
-                margin-top: 90px;
-                margin-bottom: 13px;
-                position: relative;
-             }
-        }
 
 
 
-   /* Responsive Styles for 480px width */
-
-       @media (max-width: 480px) {
-            .logo {
-                font-size: 20px;
-            }
-
-             .zoom-logo {
-                 max-width: 40px;
-              }
-
-           .menu-options {
-                margin-top: 70px;
-                margin-bottom: 13px;
-                position: relative;
-              }
-        }
-
-
-   /* Responsive Styles for 300px width */
-
-      @media only screen and (max-width: 300px) {
-         .prev, .next,.text {font-size: 11px}
-         
-        }
 
 /* Style for the Load More button */
 .load-more-container {
@@ -2599,6 +2420,8 @@ meesho-btn a:active {
             margin-bottom: 30px;
             color: #666;
         }
+
+
 
 
 /* ================================================= */
@@ -2955,19 +2778,228 @@ meesho-btn a:active {
         }
         
         
-        @media (max-width: 768px) {
-            
-            .section-title {
-                font-size: 28px;
+
+
+/* ================================================= */
+/* ---------------Responsive styles ---------------- */
+/* ================================================= */
+
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 992px) {
+        .product-section {
+            max-width: 95%;
+            margin: 30px auto;
+        }
+        .listing {
+            max-width: 900px;    
+        }
+    }
+
+    /* Responsive Styles for 768px width */
+    @media screen and (max-width: 768px) {
+        .product-section {
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .image-slider, .product-info {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .image-slider {
+            margin-bottom: 25px;
+        }
+
+        .thumbnails {
+            justify-content: center;
+        }
+
+        .product-options {
+            text-align: center;
+        }
+
+        .faq-question {
+            font-size: 16px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+        }
+
+        .faq-answer.open {
+            max-height: 400px;
+        }
+        .section-title {
+            font-size: 28px;
+        }
+        
+        .about-content, .mission-vision {
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .zoom-logo {
+                max-width: 50px;
+                    }
+
+        header {
+            padding: 10px;
+        }
+
+        .sidebar {
+            width: 300px;
+        }
+    
+        .menu-options {
+            margin-top: 90px;
+            margin-bottom: 13px;
+            position: relative;
+        }
+
+        .product {
+            flex-basis: calc(25% - 10px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 262px;
+        }
+
+    }
+
+    /* Responsive Styles for 576px width */
+    @media screen and (max-width: 576px) {
+        .product-section {
+            margin: 20px auto;
+            padding: 10px;
+        }
+        
+        .product-info h1 {
+            font-size: 22px;
+        }
+        
+        .thumbnails {
+            flex-wrap: wrap;
+        }
+        
+        .thumbnails img {
+            width: 23%;
+            margin-bottom: 5px;
+        }
+        
+        .product-options img {
+            width: 50px;
+        }
+        
+        .size-selector select {
+            width: 100%;
+        }
+        
+        .accordion {
+            font-size: 14px;
+            padding: 12px;
+        }
+
+        .product {
+            flex-basis: calc(45% - 10px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 262px;
+        }
+    }
+
+    /* Responsive Styles for 480px width */
+    @media (max-width: 480px) {
+        .logo {
+            font-size: 20px;
+        }
+
+            .zoom-logo {
+                max-width: 40px;
             }
-            
-            .about-content, .mission-vision {
-                flex-direction: column;
+
+        .menu-options {
+            margin-top: 70px;
+            margin-bottom: 13px;
+            position: relative;
             }
+
+        .product {
+            flex-basis: calc(80% - 10px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 262px;
+        }
+        .listing {
+            max-width: 400px;    
+        }
+    }
+
+    /* For very small devices */
+    @media screen and (max-width: 400px) {
+        .thumbnails img {
+            width: 22%;
+        }
+        
+        .product-options img {
+            width: 45px;
+            margin-right: 5px;
+        }
+        
+        .product-info h1 {
+            font-size: 20px;
+        }
+
+        .product {
+            flex-basis: calc(85% - 10px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 262px;
+        }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 380px) {
+        .comparison-container {
+            flex-direction: column;
+            align-items: center;
 
         }
 
+    
+        .comparison-card {
+            min-width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .recommended {
+            transform: scale(1);
+        }
+        
+        .comparison-section h2 {
+            font-size: 1.8rem;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+        }
 
+        
+    }
 
+   /* Responsive Styles for 300px width */
+
+    @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+        
+    }
 
 
