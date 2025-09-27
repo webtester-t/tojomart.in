@@ -596,8 +596,8 @@
             display: flex;
             justify-content: center;
             margin-top: 90px;
-            margin-bottom: 13px;
-            font-size: 22px;
+            margin-bottom: 20px;
+            font-size: 20px;
             color: var(--gunmetal-text);
             position: relative;
         }
@@ -607,6 +607,7 @@
             color: var(--red-ff0000);
             text-decoration: none;
             font-weight: 500;
+            font-size: 22px;
         }
 
         .menu-options a:hover {
@@ -808,7 +809,7 @@
 
 
         .product-name {
-            font-size: 24px;
+            font-size: 18px;
             margin: 10px 15px 10px 15px;
         }
 
@@ -1238,7 +1239,6 @@
       .dark-mode .menu-options a:hover {
             text-decoration: none;
             color: var(--text-color-light);
-            font-size: 18px;
         }
 
       .dark-mode  .footer-section ul li a:hover {
@@ -2784,9 +2784,8 @@ meesho-btn a:active {
 /* ---------------Responsive styles ---------------- */
 /* ================================================= */
 
-
-    /* Responsive adjustments */
-    @media screen and (max-width: 992px) {
+ /* Responsive Styles for 1024px width */
+    @media screen and (max-width: 1206px) {
         .product-section {
             max-width: 95%;
             margin: 30px auto;
@@ -2794,7 +2793,46 @@ meesho-btn a:active {
         .listing {
             max-width: 900px;    
         }
+        
+        .product {
+            flex-basis: calc(25% - 10px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 262px;
+        }
+        .product-price, .product-name, .product-author, .product-description {
+            font-size: 1.2rem; }
     }
+
+     /* Responsive Styles for 1024px width */
+    @media screen and (max-width: 1024px) {
+        .product-section {
+            max-width: 95%;
+            margin: 30px auto;
+        }
+        .listing {
+            max-width: 900px;    
+        }
+        
+        .product {
+            flex-basis: calc(33% - 10px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 262px;
+        }
+        .product-price, .product-name, .product-author, .product-description {
+            font-size: 1.2rem; }
+
+        .menu-options {
+            margin-top: 80px;
+            margin-bottom: 13px;
+            position: relative;
+            }
+
+    }
+
 
     /* Responsive Styles for 768px width */
     @media screen and (max-width: 768px) {
@@ -2855,19 +2893,18 @@ meesho-btn a:active {
             width: 300px;
         }
     
-        .menu-options {
-            margin-top: 90px;
-            margin-bottom: 13px;
-            position: relative;
-        }
 
         .product {
-            flex-basis: calc(25% - 10px);
+            flex-basis: calc(50% - 10px);
             position: relative;
             display: flex;
             flex-direction: column;
             width: 262px;
         }
+
+                
+        .product-price, .product-name, .product-author, .product-description {
+            font-size: 1.2rem; }
 
     }
 
@@ -2928,6 +2965,7 @@ meesho-btn a:active {
             margin-bottom: 13px;
             position: relative;
             }
+      .menu-options a { font-size: 1rem;}
 
         .product {
             flex-basis: calc(80% - 10px);
@@ -2939,14 +2977,18 @@ meesho-btn a:active {
         .listing {
             max-width: 400px;    
         }
+        
+        .product-price, .product-name, .product-author, .product-description {
+            font-size: 1rem;
+        }
     }
 
     /* For very small devices */
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 414px) {
         .thumbnails img {
             width: 22%;
         }
-        
+
         .product-options img {
             width: 45px;
             margin-right: 5px;
@@ -2963,10 +3005,18 @@ meesho-btn a:active {
             flex-direction: column;
             width: 262px;
         }
+        
+        .menu-options {
+            margin-top: 70px;
+            margin-bottom: 13px;
+            position: relative;
+            }
+        
+
     }
 
     /* Responsive styles */
-    @media (max-width: 380px) {
+    @media (max-width: 375px) {
         .comparison-container {
             flex-direction: column;
             align-items: center;
@@ -2992,14 +3042,19 @@ meesho-btn a:active {
             font-size: 1.8rem;
         }
 
+        .product-price, .product-name, .product-author, .product-description {
+            font-size: 1rem;
+        }
         
     }
 
    /* Responsive Styles for 300px width */
 
-    @media only screen and (max-width: 300px) {
-        .prev, .next,.text {font-size: 11px}
+    @media only screen and (max-width: 344px) {
+        .prev, .next, .text {font-size: 11px}
+
+        .product-price, .product-name, .product-author, .product-description {
+            font-size: 0.8rem; }
         
+
     }
-
-
