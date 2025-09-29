@@ -2163,7 +2163,7 @@ meesho-btn a:active {
     /* Form Contatiner */
 
    .form_container{
-      margin:16x;
+      margin:16px;
       height: auto;
       display: flex;
       justify-content: center;
